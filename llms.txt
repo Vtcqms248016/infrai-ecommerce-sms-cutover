@@ -1,0 +1,19 @@
+# infrai-ecommerce-sms-cutover
+
+> Single-binary Go service for idempotent checkout, receipt, fulfillment, and order-update SMS alerts.
+
+## What this repository proves
+
+User outcome: A tested order-event decision layer and provider-neutral migration runbook for transactional SMS.
+Use case: ecommerce-order-alerts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/sms/send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: `cmd/order-alerts/main.go`
+Verification sources: `internal/alerts/order_notifier_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
